@@ -3,9 +3,12 @@ package Ejercicio3;
 import java.util.Scanner;
 
 public class ejercicio3 {
-	static Scanner keyboard = new Scanner(System.in);
+
+	private static Scanner keyboard;
 
 	public static void main(String[] args) {
+		
+		keyboard = new Scanner(System.in);
 		String cadena = keyboard.nextLine();
 		String invertida = "";
 		
