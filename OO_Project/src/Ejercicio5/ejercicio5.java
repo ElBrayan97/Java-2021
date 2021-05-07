@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class ejercicio5 {
 	public static void main(String[] args) {
 		
-		Scanner in = new Scanner (System.in);
+		Scanner var = new Scanner (System.in);
 		double mayorsueldo = 0;
 		String mayornombre = " ";
 		int i = 0;
@@ -12,11 +12,11 @@ public class ejercicio5 {
 		while (i < 5) {
 			
 			System.out.println("Ingresa nombre del empleado");
-			String nombre = in.nextLine();
+			String nombre = var.nextLine();
 			
 			System.out.println("Ingresa el sueldo");
-			int sueldo = Integer.parseInt(in.nextLine());
-			
+			int sueldo = Integer.parseInt(var.nextLine());
+			var.close();
 			if (sueldo >= mayorsueldo) {
 				mayorsueldo = sueldo;
 				mayornombre = nombre;
