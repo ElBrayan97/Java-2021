@@ -11,7 +11,7 @@ public class ejercicio4 {
 		int mayor = 0;
 		int sum = 0;
 		
-		System.out.println("La cantidad de posiciones de este vector es " +i);
+		System.out.println("La cantidad de posiciones de este vector es " +tam);
 		
 		while (i < tam){
 			int num = numeros[i];
