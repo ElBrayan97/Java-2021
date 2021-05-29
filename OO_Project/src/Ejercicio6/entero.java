@@ -40,7 +40,7 @@ public class entero {
 			int total = 0;
 				while(i <= numero)
 				{
-					total = (i+total);
+					total = (i*total);
 					i++;
 				}
 			return (total);
