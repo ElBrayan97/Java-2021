@@ -1,20 +1,20 @@
-package mapa;
+package map;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Pais {
-
+	
 	private String nombre;
 	private String capital;
-	private Continente continente;
+	private continent continent;
 	private List<Provincia> provincias;
 	private List<Pais> limitrofes;
 
-	public Pais(String nombre, String capital, Continente continente) {
+	public Pais(String nombre, String capital, continent continent) {
 		this.nombre = nombre;
 		this.capital = capital;
-		this.continente = continente;
+		this.continent = continent;
 		this.provincias = new ArrayList<Provincia>();
 		this.limitrofes = new ArrayList<Pais>();
 	}
@@ -43,12 +43,12 @@ public class Pais {
 		this.provincias = provincias;
 	}
 
-	public Continente getContinente() {
-		return continente;
+	public continent getcontinent() {
+		return continent;
 	}
 
-	public void setContinente(Continente continente) {
-		this.continente = continente;
+	public void setcontinent(continent continent) {
+		this.continent = continent;
 	}
 
 	public List<Pais> getLimitrofes() {
