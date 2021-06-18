@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pais {
-	
+
 	private String nombre;
 	private String capital;
-	private continent continent;
+	private Continente continente;
 	private List<Provincia> provincias;
 	private List<Pais> limitrofes;
 
-	public Pais(String nombre, String capital, continent continent) {
+	public Pais(String nombre, String capital, Continente continente) {
 		this.nombre = nombre;
 		this.capital = capital;
-		this.continent = continent;
+		this.continente = continente;
 		this.provincias = new ArrayList<Provincia>();
 		this.limitrofes = new ArrayList<Pais>();
 	}
@@ -43,12 +43,12 @@ public class Pais {
 		this.provincias = provincias;
 	}
 
-	public continent getcontinent() {
-		return continent;
+	public Continente getContinente() {
+		return continente;
 	}
 
-	public void setcontinent(continent continent) {
-		this.continent = continent;
+	public void setContinente(Continente continente) {
+		this.continente = continente;
 	}
 
 	public List<Pais> getLimitrofes() {
