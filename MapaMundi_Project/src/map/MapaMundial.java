@@ -2,7 +2,7 @@ package map;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+
 
 public class MapaMundial {
 
@@ -14,13 +14,12 @@ public class MapaMundial {
 	}
 
 	public void inicializar() {
-
-		Continente africa = new Continente("Africa");
-		Continente antartida = new Continente("Antartida");
 		Continente america = new Continente("America");
-		Continente asia = new Continente("Asia");
-		Continente oceania = new Continente("Oceania");
 		Continente europa = new Continente("Europa");
+		Continente asia = new Continente("Asia");
+		Continente africa = new Continente("Africa");
+		Continente oceania = new Continente("Oceania");
+		Continente antartida = new Continente("Antartida");		
 
 		continentes.add(africa);
 		continentes.add(antartida);
