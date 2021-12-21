@@ -10,4 +10,13 @@ public class Juego {
 	private Set<Jugador> jugadores;
 	
 	
+	public Integer getPuntajeGanador() {
+		return puntajeGanador;
+	}
+	public void setPuntajeGanador(Integer puntajeGanador) {
+		this.puntajeGanador = puntajeGanador;
+	}
+	
+	
+	
 }
