@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class IntegerSum { //Clase Suma
 	
-	public static void main(String[]args){ //Método Main
+	public static void main(String[]args){ //Metodo Main
 		Scanner input = new Scanner(System.in);
 		
 		int num1;
@@ -21,7 +21,11 @@ public class IntegerSum { //Clase Suma
 		
 		System.out.printf("La suma es:%2d\n", sum);	//Formateado de clases(% -> caracter de escape) 
 
+<<<<<<< Updated upstream:LibroDeitel/src/Cap2/IntegerSum.java
 		input.close();
 		} //Fin método main
+=======
+		} //Fin metodo main
+>>>>>>> Stashed changes:Cap2 Libro/src/IntegerSum/IntegerSum.java
 
 	} //fin Clase Suma
