@@ -19,6 +19,6 @@ public class EJ2 {
 			System.out.println("Producto: " + N2*N3);
 		else 
 			System.out.println("Suma: "+ (N2+N3));
+	
 	}
-
 }
