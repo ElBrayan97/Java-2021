@@ -28,6 +28,6 @@ public class Naipe {
 
 	@Override
 	public String toString() {
-		return "[" + numero + " - " + palo + "]";
+		return (numero + " - " + palo);
 	}
 }

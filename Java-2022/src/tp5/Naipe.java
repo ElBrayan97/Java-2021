@@ -33,6 +33,6 @@ public class Naipe {
 	
 	@Override
 	public String toString() {
-		return "[ "+num+" - "+palo+" ]";
+		return (num + " - " + palo);
 	}
 }

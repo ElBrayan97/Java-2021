@@ -2,7 +2,6 @@ package tp5;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 import java.util.List;
 
 public class Mazo {
@@ -11,6 +10,7 @@ public class Mazo {
 	
 	public Mazo() {
 		this.naipes =new ArrayList<Naipe>();
+		inicializar();
 		
 	}
 	public List<Naipe> getNaipes(){
@@ -36,5 +36,22 @@ public class Mazo {
 		else
 			return naipes.remove(naipes.size()-1);
 	}
-
+	
+	public boolean getEmpty() {
+		if (naipes.isEmpty()) { 
+			return true;
+		}else {
+			inicializar();
+			return false;
+		}
+	}
+		
+	  @Override
+	  public String toString() {
+		  String resultado = "";
+		  for(Naipe n : this.naipes) {
+			  resultado += n + "\n";
+		  }
+		  return resultado;
+	  }
 }

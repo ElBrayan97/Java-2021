@@ -1,15 +1,19 @@
 package tp5;
 
 public enum Palo{
-	ORO("Oro","O"), BASTO("Basto","B"), ESPADA("Espada","E"), COPA("Copa","C");
-
+	ORO("Oro", "O"),
+	ESPADA("Espada", "E"),
+	COPA("Copa", "C"),
+	BASTO("Basto", "B");
 	
-	private String name;
-	private String simbol;
+	private String nombre;
+	private String simbolo;
 	
-	private Palo(String nombre, String simbolo) {
-		this.name = nombre;
-		this.simbol = simbolo;
+	private Palo(String nombre, String simbolo){
+		this.nombre = nombre;
+		this.simbolo = simbolo;
+		}
+	public String getNombre() {
+		return nombre;
 	}
-	
 }
