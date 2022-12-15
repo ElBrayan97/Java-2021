@@ -1,4 +1,4 @@
-package tp5;
+package tp5a;
 
 public class Naipe {
 	private Integer num;

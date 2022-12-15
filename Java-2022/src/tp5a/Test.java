@@ -1,11 +1,11 @@
-package tp5;
+package tp5a;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class Test {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+		//Scanner sc = new Scanner(System.in);
 		Mazo mazo = new Mazo(); // Nuevo Mazo
 		Juego game = new Juego(); // Nueva Partida
 		Naipe carta;

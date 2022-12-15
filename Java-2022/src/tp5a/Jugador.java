@@ -1,4 +1,4 @@
-package tp5;
+package tp5a;
 
 public class Jugador {
 	private int puntos = 0;
