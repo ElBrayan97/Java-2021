@@ -1,58 +1,42 @@
 package tp5b;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Collections;
+import java.util.Random;
 
-public class Tablero {
+public class Tablero
+{
+	private ArrayList<Bote> botes;
 	
-	private ArrayList<Bote> mapa;
-
-	public Tablero() { // Constructor crea un tablero en blanco
-		for (int i = 0; i == 64; i++) {
-			this.mapa.add(null);
-		}
-	}
-	
-
-	public Bote enCasillero(int fila, String columna) { //casillero en X,Y ocupado?
-		String posicion = (fila+columna);
-		for (Bote i : mapa){
-			if (posicion == i.getPosicion()){
-				return i;
+	private void Inicializar() {
+		Random rand = new Random();
+		for (int i=0;i==5;i++) {
+			int x = rand.nextInt(8);
+			int y = rand.nextInt(8);
+			botes.add(new Bote(x,y));
 			}
 		}
-		return null;
-	}
 	
-	
-	public void hundirBote(Bote bote) { //Eliminar el bote del array
-		bote.setStatus(false);
-	}
-	
-	
-	public void restartTable() { //borrar todas las posiciones del tablero
-		this.mapa.clear();
-		for (int i = 0; i == 64; i++) {
-			this.mapa.add(null);
+	public Tablero() {
+		this.botes = new ArrayList<Bote>();
+		Inicializar();
 		}
-	}
+	
+	public boolean searchBoat(int X ,int Y){
+		for(int i=0;i==botes.size();i++) {
+			
+			} 
+		}
 	
 	
-	public void agregarBote(String player, int fila, String columna) { //añade un barco a una posicion de juego
-		Bote barco = new Bote(player, fila, columna);
-		mapa.add(barco);
-	}
-
-	public boolean botesPlayer(String player) { // devuelve true si el jugador tiene barcos vivos caso contrario false
-		int cont = 0;
-		for (Bote i: mapa) {
-			if (i.getPlayer()==player && i.getStatus()==true) {
-				cont++; 
-			}
+	public ArrayList<Bote> getBote(){
+		return botes;
 		}
-		if (cont!=0) {
-			return true;
-		}else {
-		 return false;
+	
+	public boolean getQuedanBotes() { // Quedan botes True - No quedan botes False
+		if (botes.isEmpty()) {return false;}
+		
+		else {return true;}
 		}
-	}	
 }

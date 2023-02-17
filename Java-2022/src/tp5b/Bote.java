@@ -1,34 +1,19 @@
 package tp5b;
 
 public class Bote {
-	private boolean vivo; //vivo o muerto
-	private int fila; 
-	private String columna;
-	private String player; //nombre del jugador
+	private int X;
+	private int Y;
 
-	public Bote(String jugador, int fila, String columna) {
-		this.vivo = true;
-		this.fila = fila;
-		this.columna = columna;
+	public Bote(int fila, int columna) {
+		this.X = fila;
+		this.Y = columna;
 	}
 	
-	public String getPlayer() {
-		return player;
-	}
-
-	public void setPlayer(String player) {
-		this.player = player;
-	}
-
-	public boolean getStatus() {
-		return this.vivo;
+	public int getColumna() {
+		return this.X;
 	}
 	
-	public void setStatus(boolean estado) {
-		this.vivo = estado;
-	}
-	
-	public String getPosicion() {
-		return (this.fila+this.columna);
+	public int getFila() {
+		return this.Y;
 	}
 }
