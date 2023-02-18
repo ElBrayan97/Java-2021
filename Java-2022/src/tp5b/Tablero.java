@@ -8,24 +8,30 @@ public class Tablero
 {
 	private ArrayList<Bote> botes;
 
-	private HashMap<Integer,String> equivalencia = new HashMap<Integer,String>(); 
+	private HashMap<String, Integer> equivalencia = new HashMap<String, Integer>(); 
 	
 	private void startEquivalencia() {
-		equivalencia.put(0, "A");
-		equivalencia.put(1, "B");
-		equivalencia.put(2, "C");
-		equivalencia.put(3, "D");
-		equivalencia.put(4, "E");
-		equivalencia.put(5, "F");
-		equivalencia.put(6, "G");
+		equivalencia.put("A", 1);
+		equivalencia.put("B", 2);
+		equivalencia.put("C", 3);
+		equivalencia.put("D", 4);
+		equivalencia.put("E", 5);
+		equivalencia.put("F", 6);
+		equivalencia.put("G", 7);
+		equivalencia.put("H", 8);
+	}
+	
+	private int getPosInteger(String pos) {
+		return equivalencia.get(pos);
 	}
 	
 	public void Inicializar() {
 		Random rand = new Random();
-		for (int i=0;i==5;i++) {
+		for (int i=0; i<=5; i++) {
 			int x = rand.nextInt(8);
 			int y = rand.nextInt(8);
-			botes.add(new Bote(x,y));
+			Bote boat = new Bote(x,y);
+			botes.add(boat);
 			}
 		this.startEquivalencia();
 		}
@@ -35,24 +41,22 @@ public class Tablero
 		Inicializar();
 		}
 	
-	public boolean searchBoat(int x, int y) // Verifica que las posiciones que se ingresaron, corresponden a un bote
-		{
-		for(int i=0; i==botes.size(); i++)
+	public boolean searchBoat(int x, String y) // Verifica que las posiciones que se ingresaron, corresponden a un bote
+		{ // hice 400 versiones y metodos antes de esto... espero funcione porque es "simple" :´D (kill me)
+		for(int i=0; i<=botes.size()-1; i++)
 			{
 			Bote b = new Bote(-1,-1);
 			b = botes.get(i);
-			if ((b.getColumna()==y) && (b.getFila()==x))
+			int aux = this.getPosInteger(y); //busca en el hash la equivalencia de la letra en numero
+			if ((b.getColumna()==aux) && (b.getFila()==x))
 				{
 				botes.remove(i);
-				return true;
+				return true; //si hay un bote en esa pos
 				}
 			}
-		return false;
+		return false; // si no hay un bote en esa posiS
 		}
-	
-	public ArrayList<Bote> getBote(){
-		return botes;
-		}
+
 	
 	public boolean getQuedanBotes() { // Quedan botes True - No quedan botes False
 		if (botes.isEmpty()) {return false;}
